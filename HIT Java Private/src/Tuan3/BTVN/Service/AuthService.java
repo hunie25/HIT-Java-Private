@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 public class AuthService {
-    private final ArrayList<User> users;
+    private ArrayList<User> users = null;
 
-    public AuthService(ArrayList<User> users) {
+    public AuthService() {
         this.users = users;
     }
 
@@ -25,7 +25,7 @@ public class AuthService {
 
     private boolean isValidUsername(String username) {
         if (username == null || username.trim().isEmpty()) {
-            System.out.println("TEn nguoi dung khong duoc de trong!");
+            System.out.println("Ten nguoi dung khong duoc de trong!");
             return false;
         }
         if (username.length() < 3) {

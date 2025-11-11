@@ -7,18 +7,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+
+    public static ArrayList<User> userList = new ArrayList<>();
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ArrayList<User> userList = new ArrayList<>();
         userList.add(new User("U001", "admin", "Admin@123", "admin@gmail.com", "0987654321"));
         userList.add(new User("U002", "khanh", "Khanh@123", "khanh@gmail.com", "0911222333"));
         userList.add(new User("U003", "huyen", "Huyen@123", "huyen@gmail.com", "0933444555"));
         userList.add(new User("U004", "minh", "Minh@123", "minh@gmail.com", "0944555666"));
         userList.add(new User("U005", "lam", "Lam@123", "lam@gmail.com", "0955666777"));
 
-        AuthService authService = new AuthService(userList);
-        UserService userService = new UserService(userList);
+        AuthService authService = new AuthService();
+        UserService userService = new UserService();
 
         while (true) {
             System.out.println("\n--- Menu Auth ---");

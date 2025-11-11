@@ -7,7 +7,7 @@ public class UserService {
 
     private ArrayList<User> users;
 
-        public UserService(ArrayList<User> users) {
+        public UserService() {
             this.users = users;
         }
 
